@@ -6,12 +6,13 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 07:58:37 by fporciel          #+#    #+#             */
-/*   Updated: 2023/02/07 09:46:48 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/08 09:32:50 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#include <stdlib.h>
 # include <string.h>
 
 typedef struct	s_list

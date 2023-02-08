@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 17:05:08 by fporciel          #+#    #+#             */
-/*   Updated: 2023/02/07 08:27:36 by fporciel         ###   ########.fr       */
+/*   Created: 2023/02/08 11:24:12 by fporciel          #+#    #+#             */
+/*   Updated: 2023/02/08 11:31:00 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*strmapi;
 	unsigned int	j;
 
-	if (s == NULL)
+	if ((s == NULL) || (*s == 0) || (*f == NULL))
 		return (NULL);
 	slen = ft_slen(s);
 	strmapi = (char *)malloc(sizeof(char) * (slen + 1));
 	if (strmapi == NULL)
-		return (NULL);
+		rturn (NULL);
 	j = 0;
 	while (s[j])
 	{
