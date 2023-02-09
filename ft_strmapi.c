@@ -6,33 +6,33 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:24:12 by fporciel          #+#    #+#             */
-/*   Updated: 2023/02/09 15:38:42 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:48:20 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
-static size_t	ft_slen(char const *s)
+static unsigned int	ft_strmchck(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
 
+	if (*s == 0)
+		return (0);
 	i = 0;
-	while (s[i])
+	while ((s[i]) && (f(i, s[i])))
 		i++;
 	return (i);
 }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t			slen;
+	unsigned int	slen;
 	char			*strmapi;
 	unsigned int	j;
 
-	if ((s == NULL) || (*s == 0) || (*f == NULL))
+	if ((s == NULL) || (*f == NULL))
 		return (NULL);
-	slen = ft_slen(s);
+	slen = ft_strmchck(s, f);
 	strmapi = (char *)malloc(sizeof(char) * (slen + 1));
 	if (strmapi == NULL)
 		return (NULL);
