@@ -6,7 +6,7 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 09:08:25 by fporciel          #+#    #+#             */
-/*   Updated: 2023/01/31 09:44:19 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:32:14 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 
@@ -28,7 +28,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strcat(char *dst, const char *src)
+static char	*ft_strcat(char *dst, const char *src)
 {
 	size_t	i;
 	size_t	j;

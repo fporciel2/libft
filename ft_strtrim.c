@@ -6,7 +6,7 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 10:26:41 by fporciel          #+#    #+#             */
-/*   Updated: 2023/02/01 12:36:35 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:33:52 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include "libft.h"
 
-int	ft_trimchk(char c, char const *set)
+static int	ft_trimchk(char c, char const *set)
 {
 	int	i;
 

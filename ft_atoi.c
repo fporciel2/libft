@@ -6,13 +6,13 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 09:01:03 by fporciel          #+#    #+#             */
-/*   Updated: 2023/01/24 10:27:09 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:21:33 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_power(int base, int exp)
+static int	ft_power(int base, int exp)
 {
 	int	power;
 
@@ -33,7 +33,7 @@ int	ft_power(int base, int exp)
 	return (power);
 }
 
-int	ft_chkatoi(char *nptr)
+static int	ft_chkatoi(char *nptr)
 {
 	int	i;
 

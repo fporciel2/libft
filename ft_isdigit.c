@@ -6,13 +6,13 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 07:35:16 by fporciel          #+#    #+#             */
-/*   Updated: 2023/01/31 07:37:24 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:53:56 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int a)
+int	ft_isdigit(int c)
 {
 	return ((a >= 48) && (a <= 57));
 }
