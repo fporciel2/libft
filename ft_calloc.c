@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 static void	*ft_callocmemset(void *cal, int c, size_t countsize)
 {
