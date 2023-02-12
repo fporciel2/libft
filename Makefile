@@ -10,18 +10,28 @@
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: all clean fclean re
+.DEFAULT_GOAL := $(NAME)
 NAME := libft.a
 SRCS := $(wildcard *.c)
 HEADERS := $(wildcard *.h)
-OBJS := $(wildcard *.o)
+OBJS := $(patsubst %.c,%.o,$(SRCS))
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror -c
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADERS)
 	ar rcs $@ $^
 
-all:
-	$(NAME)
+all: $(NAME)
 
-$(OBJS): $(SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) $(SRCS)
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) $^
+
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
