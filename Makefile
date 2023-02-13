@@ -6,7 +6,7 @@
 #    By: fporciel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/09 17:20:25 by fporciel          #+#    #+#              #
-#    Updated: 2023/02/13 10:13:05 by fporciel         ###   ########.fr        #
+#    Updated: 2023/02/13 13:04:51 by fporciel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ all: $(NAME)
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) $^
 
-bonus: $(BONUSOBJS)
-	ar rcs $(NAME) $<
+bonus: $(NAME) $(BONUSOBJS)
+	ar rcs $(NAME) $(BONUSOBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUSOBJS)
