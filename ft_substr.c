@@ -6,7 +6,7 @@
 /*   By: fporciel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 07:54:54 by fporciel          #+#    #+#             */
-/*   Updated: 2023/02/07 17:42:24 by fporciel         ###   ########.fr       */
+/*   Updated: 2023/03/04 10:12:04 by fporciel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static size_t	ft_l(char const *s, unsigned int start, size_t len)
 	j = 0;
 	if (start >= ft_slen(s))
 		return (0);
-	while ((s[j] != 0) && (j < len))
+	while (s[j] && (j < len))
 		j++;
 	return (j);
 }
@@ -42,7 +42,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	if ((s == NULL) || (*s == 0))
-		return (ft_strdup(""));
+		return ((char *)s);
 	slen = ft_slen(s);
 	i = start;
 	j = ft_l(s, start, len);

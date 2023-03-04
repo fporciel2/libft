@@ -6,7 +6,7 @@
 #    By: fporciel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/09 17:20:25 by fporciel          #+#    #+#              #
-#    Updated: 2023/02/13 15:26:51 by fporciel         ###   ########.fr        #
+#    Updated: 2023/03/04 10:10:11 by fporciel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,10 @@ $(NAME): $(OBJS) $(HEADERS)
 
 all: $(NAME)
 
-%.o: %.c $(HEADERS)
+$(OBJS): $(SRCS) $(HEADERS)
+	$(CC) $(CFLAGS) $^
+
+$(BONUSOBJS): $(BONUSSRCS) $(HEADERS)
 	$(CC) $(CFLAGS) $^
 
 bonus: $(NAME) $(BONUSOBJS)
