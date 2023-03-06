@@ -45,7 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	if ((s == NULL) || (*s == 0))
-		return ((char *)s);
+		return (ft_strdup(""));
 	slen = ft_slen(s);
 	i = start;
 	j = ft_l(s, start, len);
