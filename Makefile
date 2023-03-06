@@ -13,7 +13,7 @@
 .PHONY: all clean fclean re bonus
 .DEFAULT_GOAL := $(NAME)
 NAME := libft.a
-SRCS := $(filter-out ft_lst%.c, $(wildcard *.c))
+SRCS := $(filter-out ft_lst%.c, $(wildcard ft_*.c))
 BONUSSRCS := $(wildcard ft_lst*.c)
 HEADERS := $(wildcard *.h)
 OBJS := $(patsubst %.c,%.o,$(SRCS))
